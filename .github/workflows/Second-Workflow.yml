@@ -9,7 +9,7 @@ jobs:
       - name: first step 
         run: echo "Starting workflow"
         
-       - name: second step
+      - name: second step
         run: echo "Checking project"
         
       - name: thirt step
