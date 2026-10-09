@@ -1,0 +1,14 @@
+name: Second Workflow
+on: push
+
+jobs:
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: first step 
+	run: echo "Starting workflow"
+      - name: second step
+        run: echo "Checking project"
+      - name: thirt step
+        run: echo "Workflow completed"
