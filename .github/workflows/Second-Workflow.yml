@@ -7,8 +7,4 @@ jobs:
 
     steps:
       - name: first step 
-	run: echo "Starting workflow"
-      - name: second step
-        run: echo "Checking project"
-      - name: thirt step
-        run: echo "Workflow completed"
+     run: echo "Starting workflow"
