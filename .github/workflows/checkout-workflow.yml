@@ -13,4 +13,5 @@ jobs:
       - name: Step2
         run: ls
 
-        
+      - name: Step3
+        run: PWD
