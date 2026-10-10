@@ -20,7 +20,7 @@ jobs:
         run: cat Readme.md
 
       - name: Step5
-        run: test -f Readme11.md
+        run: test -f Readme.md
 
       - name: Step6
         if: ${{ success() }}
