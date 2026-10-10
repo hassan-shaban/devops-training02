@@ -7,13 +7,23 @@ jobs:
       
     steps:
     - name: step1
-      run: echo " project is building "
+      run: echo " Building application "
 
 
   test:
     needs: build
     runs-on: ubuntu-latest
 
+    steps:
+      - name: step1
+        run: exit 1
 
   deploy:
     runs-on: ubuntu-latest
+    needs: [build, test]
+    if: ${{ always() && needs.build.result == 'success' }}
+
+    steps:
+      - name: step1
+        run: echo " project is deploying "
+
