@@ -20,9 +20,11 @@ jobs:
         run: cat Readme.md
 
       - name: Step5
-        if: ${{ success() }}
-        run: test -f Readme11.md 
+        run: test -f Readme11.md
 
       - name: Step6
-        if: ${{ success() }} 
+        if: ${{ success() }}
         run: echo "Readme.md file exists"
+
+      - name: Step7
+        run: echo "Workflow finished"
