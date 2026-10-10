@@ -27,4 +27,5 @@ jobs:
         run: echo "Readme.md file exists"
 
       - name: Step7
+        if: ${{ laalways() }}
         run: echo "Workflow finished"
