@@ -22,3 +22,7 @@ jobs:
       - name: Step5
         if: ${{ success() }}
         run: test -f Readme.md 
+
+      - name: Step6
+        if: ${{ success() }} 
+        run: echo "Readme.md file exists"
