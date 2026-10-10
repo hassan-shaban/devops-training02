@@ -1,0 +1,23 @@
+name: Checkout Workflow
+on: push
+
+
+jobs:
+  checkout-job:
+    runs-on: ubuntu-latest
+
+    steps
+      - name: Step1
+        uses: actions/checkout@v4
+
+         - name: Step2
+        run: ls  
+
+
+
+
+
+
+
+
+
