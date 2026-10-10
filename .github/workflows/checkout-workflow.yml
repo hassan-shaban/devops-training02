@@ -20,4 +20,4 @@ jobs:
         run: cat Readme.md
 
       - name: Step5
-        run: test -f Readme.md && echo "Readme.md exists" || echo "Readme.md does not exist"
+        run: test -f RReadme.md && echo "Readme.md exists" || echo "Readme.md does not exist"
