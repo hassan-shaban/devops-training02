@@ -15,6 +15,6 @@ jobs:
 
       - name: Step3
         run: pwd
-        
+
       - name: Step4
-        run: cat README.md
+        run: cat Readme.md
