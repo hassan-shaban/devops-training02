@@ -20,4 +20,5 @@ jobs:
         run: cat Readme.md
 
       - name: Step5
-        run: test -f RReadme.md && echo "Readme.md exists" || echo "Readme.md does not exist"
+        if: ${{ success() }}
+        run: test -f Readme.md 
