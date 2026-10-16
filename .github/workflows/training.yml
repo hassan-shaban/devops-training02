@@ -10,11 +10,11 @@ jobs:
     steps:
       - name: set version
         id: version
-        run:  echo "app_version=1.0.0" >> $GITHUB_OUTPUT
+        run:  echo "app_version=2.0" >> $GITHUB_OUTPUT
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Show version
-        run: echo "Deploying version ${{ needs.build.version }}"     
+        run: echo "Deploying version ${{ needs.build.outputs.version }}"     
