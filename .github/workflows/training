@@ -10,6 +10,5 @@ jobs:
     steps:
       - name: set version
         id: version
-        run: |
-          echo "app_version=1.0.0" >> $GITHUB_OUTPUT
+        run:  echo "app_version=1.0.0" >> $GITHUB_OUTPUT
      
