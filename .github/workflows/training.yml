@@ -5,16 +5,21 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
+      name: ${{ steps.name.outputs.app_name}}
       version: ${{ steps.version.outputs.app_version }}
 
     steps:
+      - name: set name
+        id: name
+        run: echo "app_name=radioreport" >> "$GITHUB_OUTPUT"
+
       - name: set version
         id: version
-        run:  echo "app_version=radio report >> $GITHUB_OUTPUT
+        run: echo "app_version=1.0.0" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Show version
-        run: echo "Deploying version ${{ needs.build.outputs.version }}"     
+        run: echo "Deploying  ${{ needs.build.outputs.name }} version  ${{ needs.build.outputs.version }}"     
