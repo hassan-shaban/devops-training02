@@ -26,7 +26,7 @@ jobs:
           name: build-report
           path: downloaded-report
 
-      - name: Show report
+      - name: read report
         run: cat downloaded-report/report.txt
 
         
