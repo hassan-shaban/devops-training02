@@ -1,5 +1,7 @@
 name: test workflow
 on: push
+env:
+  API_token: ${{secrets.DEMO_TOKEN}}
 
 
 
@@ -7,5 +9,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: display APP-name
-        run: echo "Application name: ${{ vars.APP_NAME }}"
+      - name: check API token
+        run: |
+          if [ -n "$API_token" ]; then
+            echo "secret is configured"
+          else
+            echo "secret is not configured"
+            exit 1
+          fi
