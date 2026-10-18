@@ -4,7 +4,13 @@ on:
   pull_request:
    branches:
      - main
+   types: 
+     - opened
+     - synchronize
   workflow_dispatch:
+
+  schedule:
+    - cron: '0 18 * * *'
 env:
   API_token: ${{secrets.DEMO_TOKEN}}
 
