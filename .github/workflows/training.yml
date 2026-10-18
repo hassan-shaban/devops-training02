@@ -19,3 +19,20 @@ jobs:
     - name: show file content
       run: cat generated.txt
 
+      
+    - name: Configure Git
+      run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+    - name: Commit and push file
+      run: |
+          git add generated.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add generated file"
+            git push
+          fi
+
+
