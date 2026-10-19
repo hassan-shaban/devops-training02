@@ -24,7 +24,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Add training file"
+            git commit -m "Add training file2"
             git push 
           fi
 
